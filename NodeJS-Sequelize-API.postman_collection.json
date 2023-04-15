@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "0c4fa67f-ba59-4f5c-915a-c6994425ad07",
+		"name": "NodeJS-Sequelize-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23240184"
+	},
+	"item": [
+		{
+			"name": "1. User Like - Unlike",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 8,\r\n    \"res_id\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/res/UserLikeRes",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"UserLikeRes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Get list like by res",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/res/GetListLikeByRes/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"GetListLikeByRes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Get list like by user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/res/GetListLikeByUser/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"GetListLikeByUser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Add Rate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 8,\r\n    \"res_id\": 2,\r\n    \"amount\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/res/AddRate",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"AddRate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Get list rate by res",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/res/GetListRateByRes/3",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"GetListRateByRes",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Get list rate by user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/res/GetListRateByUser/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"GetListRateByUser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Add order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 2,\r\n    \"food_id\": 7,\r\n    \"amount\": 10,\r\n    \"arr_sub_id\": \"[1, 5]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/res/AddOrder",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"AddOrder"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:5000/api",
+			"type": "string"
+		}
+	]
+}
